@@ -7,28 +7,22 @@ async function getBlogPosts() {
 	for (let i = 0; i < posts.length; i++) {
 		const post = posts[i];
 		const title = post.title["rendered"];
-		const image = post._embedded["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"];
+		const image = post._embedded["wp:featuredmedia"][0]["media_details"]["sizes"]["large"]["source_url"];
 		carousel.innerHTML += `<div class="caro-post">
-        <a href="blog.html?id=${post.id}">
-        <h2>${title}</h2>
-        <img src="${image}""></img>
+        <a href="blog.html?id=${post.id}" class="caro-link">
+        <h2 class="caro-title">${title}</h2>
+        <img src="${image}" class="caro-img"></img>
         </a>
         </div>`;
 	}
 }
 getBlogPosts();
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
 
-const carouselPosts = [...document.querySelectorAll(".carousel-posts")];
-const nextBtn = [...document.querySelectorAll(".next-btn")];
-const prevBtn = [...document.querySelectorAll(".prev-btn")];
-
-carouselPosts.forEach((post, i) => {
-	let containerDimensions = post.getBoundingClientRect();
-	let containerWidth = containerDimensions.width;
-	prevBtn[i].addEventListener("click", () => {
-		post.scrollLeft -= containerWidth;
-	});
-	nextBtn[i].addEventListener("click", () => {
-		post.scrollLeft += containerWidth;
-	});
+prevBtn.addEventListener("click", () => {
+	carousel.scrollLeft -= 375;
+});
+nextBtn.addEventListener("click", () => {
+	carousel.scrollLeft += 375;
 });
