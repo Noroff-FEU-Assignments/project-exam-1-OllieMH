@@ -6,10 +6,26 @@
 		<title>About</title>
 		<link rel="stylesheet" href="styles.css" />
 		<script src="https://kit.fontawesome.com/bfa58802a2.js" crossorigin="anonymous"></script>
+		<!-- Hotjar Tracking Code for Omhille.no -->
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj =
+					h.hj ||
+					function () {
+						(h.hj.q = h.hj.q || []).push(arguments);
+					};
+				h._hjSettings = { hjid: 3754898, hjsv: 6 };
+				a = o.getElementsByTagName("head")[0];
+				r = o.createElement("script");
+				r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+		</script>
 	</head>
 	<body>
 		<header>
-			<nav class="topnav">
+			<nav class="topnav nav-bg">
 				<a href="index.html" class="navn">OMH</a>
 				<div class="ham">
 					<i class="mobile fa fa-bars icon fa-xl"
@@ -26,11 +42,18 @@
 				</div>
 			</nav>
 		</header>
-		<main>
+		<main class="about-main">
 			<h1>About me</h1>
-			<p class="about-txt">Blahblahblah</p>
+			<div class="about-txt">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis, magna ornare volutpat condimentum, urna ex dignissim ipsum, ut finibus tellus odio ut tellus. Nullam eget sodales odio, eget consectetur libero. Nulla
+					facilisi. Integer felis eros, aliquet ac tempus ut, cursus nec nisl. Sed lobortis nisi elit, in eleifend orci suscipit sit amet. Fusce arcu urna, laoreet eleifend mi at, dapibus mattis turpis. Duis bibendum leo nec tellus
+					condimentum, eu viverra nulla aliquam. Duis nec orci viverra, ullamcorper dui ut, pellentesque neque. Nam semper mauris lorem, sed interdum turpis molestie et. Morbi ultrices vulputate venenatis. Suspendisse imperdiet tempor
+					sagittis. Vivamus mollis massa a justo euismod lobortis. Fusce et ante non odio suscipit tempus. Ut rhoncus lobortis pellentesque.
+				</p>
+			</div>
 		</main>
-		<footer></footer>
+		<footer class="footer-bg"></footer>
 		<script src="nav.js"></script>
 	</body>
 </html>
