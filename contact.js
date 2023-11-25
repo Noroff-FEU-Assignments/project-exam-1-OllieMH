@@ -12,7 +12,7 @@ const confirmation = document.querySelector(".confirmation");
 btn.disabled = true;
 
 function validateForm() {
-	if (validateEmail(mail.value) && checkLength(message.value, 9) && checkLength(subject.value, 14) && checkLength(fName.value, 4)) {
+	if (validateEmail(mail.value) && checkLength(message.value, 24) && checkLength(subject.value, 14) && checkLength(fName.value, 4)) {
 		btn.disabled = false;
 	} else {
 		confirmation.innerHTML = "";
@@ -23,7 +23,7 @@ function validateForm() {
 	} else {
 		mailError.style.display = "block";
 	}
-	if (checkLength(message.value, 9) === true) {
+	if (checkLength(message.value, 24) === true) {
 		messageError.style.display = "none";
 	} else {
 		messageError.style.display = "block";

@@ -13,7 +13,7 @@ async function fetchPost() {
 	const post = data;
 	const title = post.title["rendered"];
 	const text = post.content["rendered"];
-	const image = post._embedded["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"];
+	const image = post._embedded["wp:featuredmedia"][0]["media_details"]["sizes"]["large"]["source_url"];
 	const largeImg = post._embedded["wp:featuredmedia"][0]["media_details"]["sizes"]["large"]["source_url"];
 
 	h1.innerHTML = title;
@@ -21,7 +21,7 @@ async function fetchPost() {
 	blogImg.src = image;
 	blogImg.onclick = function () {
 		modal.style.display = "flex";
-		modal.innerHTML = `<image src="${largeImg}" class="modal-img">`;
+		modal.innerHTML = `<image src="${image}" class="modal-img">`;
 		console.log(largeImg);
 	};
 	modal.onclick = function () {
