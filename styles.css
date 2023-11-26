@@ -175,10 +175,10 @@ h1 {
 .bl-btn-div {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin: 20px;
 }
 .bloglist-btn {
-	padding: 10px;
+	padding: 15px;
 	border-radius: 5px;
 	border-width: 1px;
 }
@@ -281,6 +281,8 @@ h1 {
 	#hamburger {
 		opacity: 0;
 		position: fixed;
-		padding: 50px;
+	}
+	.caro-img {
+		width: 310px;
 	}
 }

@@ -19,10 +19,15 @@ async function getBlogPosts() {
 getBlogPosts();
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+let scrollLength = 335;
 
+if (mediaQuery.matches) {
+	scrollLength = 750;
+}
 prevBtn.addEventListener("click", () => {
-	carousel.scrollLeft -= 375;
+	carousel.scrollLeft -= scrollLength;
 });
 nextBtn.addEventListener("click", () => {
-	carousel.scrollLeft += 375;
+	carousel.scrollLeft += scrollLength;
 });
