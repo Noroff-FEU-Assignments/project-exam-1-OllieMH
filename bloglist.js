@@ -13,7 +13,7 @@ async function getBlogPosts() {
 		blogContainer.innerHTML += `<div class="postbox">
         <a href="blog.html?id=${post.id}">
         <h2>${title}</h2>
-        <img src="${image}""></img>
+        <img src="${image}" alt=""></img>
         </a>
         </div>`;
 	}

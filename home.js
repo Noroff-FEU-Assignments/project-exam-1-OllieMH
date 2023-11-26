@@ -11,7 +11,7 @@ async function getBlogPosts() {
 		carousel.innerHTML += `<div class="caro-post">
         <a href="blog.html?id=${post.id}" class="caro-link">
         <h2 class="caro-title">${title}</h2>
-        <img src="${image}" class="caro-img"></img>
+        <img src="${image}" class="caro-img" alt=""></img>
         </a>
         </div>`;
 	}

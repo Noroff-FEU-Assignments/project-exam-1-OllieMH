@@ -21,7 +21,7 @@ async function fetchPost() {
 	blogImg.src = image;
 	blogImg.onclick = function () {
 		modal.style.display = "flex";
-		modal.innerHTML = `<image src="${image}" class="modal-img">`;
+		modal.innerHTML = `<image src="${image}" class="modal-img" alt="">`;
 		console.log(largeImg);
 	};
 	modal.onclick = function () {
